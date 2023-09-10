@@ -59,5 +59,7 @@ public class Mail {
 
         driver.close();
 
+        System.out.println(" ** Test Completed **");
+
     }
 }

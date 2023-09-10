@@ -43,6 +43,8 @@ public class AbTest {
         }
 
         // driver.close();
+
+        System.out.println(" ** Test Completed **");
     }
 
 }

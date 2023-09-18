@@ -1,4 +1,5 @@
 package lambdatest;
+
 import java.time.Duration;
 import java.util.Iterator;
 import java.util.Set;
@@ -11,11 +12,12 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-public class AddRemoveElement {
+public class AddElement {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-WebDriver driver = new ChromeDriver();
+		
+		WebDriver driver = new ChromeDriver();
 		
 		
 		System.out.println("Browser opened");
@@ -55,7 +57,13 @@ WebDriver driver = new ChromeDriver();
 		String childId = it.next();
 		
 		driver.switchTo().window(childId);
-		System.out.println(driver.findElement(By.cssSelector("img[alt='Elemental Selenium Logo']")).getText());
+		
+//		System.out.println(driver.findElement(By.cssSelector(".home-header")).getText());
+		Assert.assertEquals(driver.findElement(By.cssSelector(".home-header")).getText(),"Make sure your code lands");
+		
+		System.out.println("Test End");
+		
+		driver.switchTo().window(parentId);
 		driver.close();
 	}
 }

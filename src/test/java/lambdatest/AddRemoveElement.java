@@ -64,6 +64,6 @@ public class AddElement {
 		System.out.println("Test End");
 		
 		driver.switchTo().window(parentId);
-		driver.close();
+		driver.quit();
 	}
 }

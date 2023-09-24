@@ -19,6 +19,7 @@ public class Main {
     WebDriver driver;
     @BeforeSuite
     public void Setup() {
+
         WebDriverManager.edgedriver().setup();
         driver = new ChromeDriver();
     }
